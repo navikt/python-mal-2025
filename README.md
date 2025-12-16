@@ -22,11 +22,12 @@ prosjektet.
 
 ### Lag et nytt prosjekt basert på malen
 
-Start med å klone prosjektet fra Github:
+Start med å [lage et nytt prosjekt med `python-mal-2025` som "template"](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
 
-```bash
-git init --template=https://github.com/navikt/python-mal-2025.git <navn-på-nytt-prosjekt>
-```
+> [!TIP]
+> Dette kan gjøres med [`gh`](https://cli.github.com/) verktøyet direkte:
+>
+> `gh repo create "navikt/<navn-på-nytt-prosjekt>" --internal --template "navikt/python-mal-2025" --clone`
 
 Deretter går vi inn i prosjektet, dette kan vi enten gjøre med `code
 <navn-på-nytt-prosjekt>` (hvis du bruker VSCode) eller naviger til
