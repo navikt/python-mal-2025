@@ -1,0 +1,22 @@
+# Oppsett for prosjektet
+.env
+.github/
+.gitignore
+.nais/
+.pre-commit-config.yaml
+.python-version
+Dockerfile
+README.md
+docker-compose.yml
+justfile
+ruff.toml
+tests/
+uv.lock
+
+# Cache mapper
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# Virtueltmiljø
+.venv/

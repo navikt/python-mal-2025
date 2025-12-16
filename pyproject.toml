@@ -1,0 +1,22 @@
+[project]
+name = "python-mal-2025"
+version = "0.1.0"
+description = "Mal for Python-prosjekt med 'best-practice' i 2025"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+lint = [
+    "pre-commit>=4.5.0",
+    "ruff>=0.14.9",
+]
+notebooks = [
+    "jupyter>=1.1.1",
+]
+quarto = [
+    "quarto-cli>=1.8.26",
+]
+
+[tool.uv]
+default-groups = ["dev", "lint"]
