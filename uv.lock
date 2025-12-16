@@ -1186,6 +1186,7 @@ quarto = [
 [package.metadata]
 
 [package.metadata.requires-dev]
+dev = []
 lint = [
     { name = "pre-commit", specifier = ">=4.5.0" },
     { name = "ruff", specifier = ">=0.14.9" },

@@ -7,6 +7,7 @@ requires-python = ">=3.12"
 dependencies = []
 
 [dependency-groups]
+dev = []
 lint = [
     "pre-commit>=4.5.0",
     "ruff>=0.14.9",
