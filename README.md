@@ -198,9 +198,8 @@ kjører den `pre-commit`).
 
 Vi har også lagt ved et enkelt Docker oppsett for å bygge koden inn i et Docker
 bildet. Dette bildet er satt opp til å bruke
-[`distroless`](https://github.com/GoogleContainerTools/distroless) for å
-minimere antall eksterne pakker som ligger i Docker, noe som igjen reduserer
-antall sårbarheter.
+[Chainguard](https://images.chainguard.dev/) for å minimere antall eksterne
+pakker som ligger i Docker, noe som igjen reduserer antall sårbarheter.
 
 > [!TIP]
 > Vi har lagt ved en kommando for å bygge oppsettet: `just build`.
@@ -208,6 +207,10 @@ antall sårbarheter.
 Bygging av Docker bildet er konfigurert med 2 filer, `Dockerfile` som beskriver
 hvordan bilde skal settes opp og `.dockerignore` som beskriver hvilke filer og
 mapper som _ikke_ skal være med i bildet.
+
+> [!NOTE]
+> Nav betaler for tilgang til flere Chainguard bilder, dette gir større frihet
+> til å bytte til et mer spisset bildet om ønskelig. Les mer om [Chainguard i Nav her](https://sikkerhet.nav.no/docs/verktoy/chainguard-dockerimages/).
 
 ---
 
