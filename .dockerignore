@@ -4,14 +4,13 @@
 .gitignore
 .nais/
 .pre-commit-config.yaml
-.python-version
 Dockerfile
+LICENSE
 README.md
 docker-compose.yml
 justfile
 ruff.toml
 tests/
-uv.lock
 
 # Cache mapper
 .mypy_cache/
