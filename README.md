@@ -182,7 +182,7 @@ regelsett så kan man endre under `[lint.select]`.
 
 Denne malen prøver å sørge for at kodenkvaliteten er god før den legges til i
 `git`. Men... det kan jo alltids skje feil så av den grunn har vi også lagt til
-en Github Action i [`.github/workflows/ci.yml`](./.github/workflows/ci.yml).
+en Github Action i [`.github/workflows/ci.yaml`](./.github/workflows/ci.yaml).
 Denne er satt opp til å kjøre tilsvarende sjekker som ved `just lint` (altså
 kjører den `pre-commit`).
 
@@ -208,9 +208,20 @@ Bygging av Docker bildet er konfigurert med 2 filer, `Dockerfile` som beskriver
 hvordan bilde skal settes opp og `.dockerignore` som beskriver hvilke filer og
 mapper som _ikke_ skal være med i bildet.
 
+Vi har laget to `Dockerfile` eksempler:
+
+- [`Dockerfile`](./Dockerfile) viser hvordan man kan bygge et Docker-bilde med \
+Chainguard og sammen Python versjon som definert i [`.python-version`](./.python-version)
+- [`chainguard_python.Dockerfile`](./chainguard_python.Dockerfile) viser hvordan \
+man kan bygge et Docker-bilde med Python supplert av Chainguard
+
 > [!NOTE]
-> Nav betaler for tilgang til flere Chainguard bilder, dette gir større frihet
-> til å bytte til et mer spisset bildet om ønskelig. Les mer om [Chainguard i Nav her](https://sikkerhet.nav.no/docs/verktoy/chainguard-dockerimages/).
+> Nav betaler for tilgang til flere Chainguard-bilder, dette gir større frihet
+> til å bytte til et mer spisset bildet om ønskelig (spesielt hvis man ikke
+> ønsker å ha to distribusjoner av Python i samme bildet - se
+> [`chainguard_python.Dockerfile`](./chainguard_python.Dockerfile)). Les mer om
+> [Chainguard > i Nav
+> her](https://sikkerhet.nav.no/docs/verktoy/chainguard-dockerimages/).
 
 ---
 
