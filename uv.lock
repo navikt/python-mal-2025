@@ -1298,14 +1298,14 @@ wheels = [
 
 [[package]]
 name = "quarto-cli"
-version = "1.8.26"
+version = "1.8.27"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "jupyter" },
     { name = "nbclient" },
     { name = "wheel" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/a4/20/3c6d3784b06be0f4bcbcac16ca8b23d4c7d3643b64a63f7e3326bc423b55/quarto_cli-1.8.26.tar.gz", hash = "sha256:2d9eec00822dbc86145a09bae6f33776f8235eb1d5c5c011116dacc9f7218043", size = 4647, upload-time = "2025-11-12T12:35:47.668Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/37/1c/91682258d62f14c7456fc5ee2a4ab70b6cdb924c0b5f6fd6a1558a1d1b44/quarto_cli-1.8.27.tar.gz", hash = "sha256:6373a0b378a97402bd856ed933d996b86d1eea3433beda5e443adb623e94a9a4", size = 4615, upload-time = "2026-01-16T09:23:04.515Z" }
 
 [[package]]
 name = "referencing"
