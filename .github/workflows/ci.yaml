@@ -28,4 +28,4 @@ jobs:
           key: pre-commit-cache|${{ hashFiles('.pre-commit-config.yaml') }}
 
       - name: "Run linting"
-        run: uv run --only-group lint pre-commit run --all-files --show-diff-on-failure --color=always
+        run: uv run --only-group lint prek run --all-files --show-diff-on-failure --color=always
