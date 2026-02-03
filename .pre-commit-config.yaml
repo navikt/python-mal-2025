@@ -9,7 +9,7 @@ repos:
       - id: trailing-whitespace
   - repo: https://github.com/astral-sh/ruff-pre-commit
     # Ruff version.
-    rev: v0.14.11
+    rev: v0.15.0
     hooks:
       # Run the linter.
       - id: ruff-check
@@ -26,6 +26,6 @@ repos:
         args: [--strict, --ignore-missing-imports]
         additional_dependencies: []
   - repo: https://github.com/kynan/nbstripout
-    rev: 0.8.2
+    rev: 0.9.0
     hooks:
       - id: nbstripout
