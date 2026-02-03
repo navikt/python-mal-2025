@@ -96,22 +96,21 @@ Available recipes:
 
 ## Hva er konfigurert i malen
 
-### `pre-commit`
+### `prek`
 
 En av de viktigste tingene denne malen konfigurerer er
-[`pre-commit`](https://pre-commit.com/). Dette er et system for å kjøre sjekker
-når (men før lagring!) kjører `git commit`. Denne funksjonaliteten gjør at vi
-kan passe på koden vår før vi lagrer noe til `git`.
+[`prek`](https://prek.j178.dev/). Dette er et system for å kjøre sjekker når
+(men før lagring!) kjører `git commit`. Denne funksjonaliteten gjør at vi kan
+passe på koden vår før vi lagrer noe til `git`.
 
 > [!TIP]
-> Vi har lagt ved en kommando for å manuelt kjøre `pre-commit`: `just lint`.
+> Vi har lagt ved en kommando for å manuelt kjøre `prek`: `just lint`.
 
-`pre-commit` er konfigurert i
-[`.pre-commit-config.yaml`](./.pre-commit-config.yaml) og denne malen legger ved
-et "standard" oppsett som sjekker litt diverse rundt filene vi har i `git`, den
-sjekker at koden er formatert riktig (i følge `ruff`), den sjekker at typene ser
-riktig ut (med `mypy`) og den vil også kjøre `nbstripout` for å fjerne
-resultater i Jupyter notatbøker.
+`prek` er konfigurert i [`.pre-commit-config.yaml`](./.pre-commit-config.yaml)
+og denne malen legger ved et "standard" oppsett som sjekker litt diverse rundt
+filene vi har i `git`, den sjekker at koden er formatert riktig (i følge
+`ruff`), den sjekker at typene ser riktig ut (med `mypy`) og den vil også kjøre
+`nbstripout` for å fjerne resultater i Jupyter notatbøker.
 
 #### Feil i `mypy`
 

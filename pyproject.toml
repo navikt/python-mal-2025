@@ -9,7 +9,7 @@ dependencies = []
 [dependency-groups]
 dev = []
 lint = [
-    "pre-commit>=4.5.0",
+    "prek>=0.3.1",
     "ruff>=0.14.9",
 ]
 notebooks = [

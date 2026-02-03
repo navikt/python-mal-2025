@@ -1,8 +1,8 @@
 # https://just.systems
 
-# Klargjør prosjektet ved å installere `pre-commit` og oppdatere avhengigheter fra malen
+# Klargjør prosjektet ved å installere `prek` og oppdatere avhengigheter fra malen
 prepare:
-    uv run --only-group lint pre-commit install
+    uv run --only-group lint prek install
     uv sync --only-group lint --upgrade
 
 # Fiks feil og formater kode med ruff
@@ -12,7 +12,7 @@ fix:
 
 # Sjekk at alt koden ser bra ut og er klar for å legges til i git
 lint:
-    uv run --only-group lint pre-commit run --all-files --color always
+    uv run --only-group lint prek run --all-files --color always
 
 # Lag et preview med Quarto
 preview:
