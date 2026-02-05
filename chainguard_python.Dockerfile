@@ -10,7 +10,7 @@ ENV UV_COMPILE_BYTECODE=1
 # Kopier fra cache siden vi bruker --mount
 ENV UV_LINK_MODE=copy
 # Ikke synkroniser disse gruppene
-ENV UV_NO_GROUP="dev lint"
+ENV UV_NO_GROUP="dev"
 
 # Opprett arbeidsmappe for prosjektet i Docker
 WORKDIR /app

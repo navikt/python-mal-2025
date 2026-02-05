@@ -7,10 +7,9 @@ requires-python = ">=3.12"
 dependencies = []
 
 [dependency-groups]
-dev = []
-lint = [
+dev = [
     "prek>=0.3.1",
-    "ruff>=0.14.9",
+    "ruff>=0.15.0",
 ]
 notebooks = [
     "jupyter>=1.1.1",
@@ -18,6 +17,3 @@ notebooks = [
 quarto = [
     "quarto-cli>=1.8.26",
 ]
-
-[tool.uv]
-default-groups = ["dev", "lint"]

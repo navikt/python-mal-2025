@@ -1,18 +1,22 @@
 # https://just.systems
 
+# Hvis ingen kommando vis alle tilgjengelige oppskrifter
+default:
+    @just --list
+
 # Klargjør prosjektet ved å installere `prek` og oppdatere avhengigheter fra malen
 prepare:
-    uv run --only-group lint prek install
-    uv sync --only-group lint --upgrade
+    uv run --only-dev prek install
+    uv lock --only-dev --upgrade
 
 # Fiks feil og formater kode med ruff
 fix:
-    uv run --only-group lint ruff check --fix .
-    uv run --only-group lint ruff format .
+    uv run --only-dev ruff check --fix .
+    uv run --only-dev ruff format .
 
 # Sjekk at alt koden ser bra ut og er klar for å legges til i git
 lint:
-    uv run --only-group lint prek run --all-files --color always
+    uv run --only-dev prek run --all-files --color always
 
 # Lag et preview med Quarto
 preview:
@@ -21,3 +25,8 @@ preview:
 # Bygg prosjektet i Docker
 build:
     docker build .
+
+# Oppdater Python og pre-commit avhengigheter
+update:
+    uv lock --upgrade
+    uv run prek auto-update

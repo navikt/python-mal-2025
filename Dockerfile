@@ -11,7 +11,7 @@ ENV UV_LINK_MODE=copy
 ENV UV_PYTHON_INSTALL_DIR=/python
 # Ikke synkroniser disse gruppene, bedre å definere i miljøvariabel for å kunne
 # bruke `uv run` som CMD senere
-ENV UV_NO_GROUP="dev lint"
+ENV UV_NO_GROUP="dev"
 
 # Opprett arbeidsmappe for prosjektet i Docker
 WORKDIR /app

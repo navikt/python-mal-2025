@@ -12,13 +12,13 @@ repos:
     hooks:
       - id: local-ruff-check
         name: ruff check
-        entry: uv run --group lint ruff check --force-exclude --fix --exit-non-zero-on-fix
+        entry: uv run --only-dev ruff check --force-exclude --fix --exit-non-zero-on-fix
         require_serial: true
         language: unsupported
         types: [python]
       - id: local-ruff-format
         name: ruff format
-        entry: uv run --group lint ruff format --force-exclude --exit-non-zero-on-format
+        entry: uv run --only-dev ruff format --force-exclude --exit-non-zero-on-format
         require_serial: true
         language: unsupported
         types: [python]

@@ -44,7 +44,7 @@ terminal):
 just prepare
 ```
 
-Dette vil installere `pre-commit` og oppdatere alle avhengigheter som hører til
+Dette vil installere `prek` og oppdatere alle avhengigheter som hører til
 denne malen.
 
 ---
@@ -59,9 +59,6 @@ Det er et par elementer i malen som ikke enkelt lar seg automatisk oppdatere.
 Disse avhengighetene burde _du_ ta en titt på når du oppretter prosjektet (og
 fra tid til annen) for å passe på at de er relevante.
 
-- [`.pre-commit-config.yaml`](./.pre-commit-config.yaml) inneholder referanser
-`pre-commit` "repo"-er som må oppdateres for å holde tritt. Merk spesielt `ruff`
-burde være samme versjon som prosjektet benytter i `uv.lock`.
 - [`Dockerfile`](./Dockerfile) refererer til et `uv` bilde, dette burde holdes
 oppdatert.
 
@@ -71,8 +68,11 @@ nyanser i hvordan vi kan oppdatere, så vi dokumenterer bare en generell
 "oppdater alle avhengigheter" her:
 
 ```bash
-uv lock --upgrade
+just update
 ```
+
+Dette vil oppgradere Python avhengigheter med `uv lock --upgrade` og oppdatere
+`prek` avhengigheter med `prek auto-update`.
 
 ## Tilgjengelige kommandoer
 
@@ -88,10 +88,12 @@ I skrivendestund er følgende kommandoer støttet:
 ```txt
 Available recipes:
     build   # Bygg prosjektet i Docker
+    default # Hvis ingen kommando vis alle tilgjengelige oppskrifter
     fix     # Fiks feil og formater kode med ruff
     lint    # Sjekk at alt koden ser bra ut og er klar for å legges til i git
-    prepare # Klargjør prosjektet ved å installere `pre-commit` og oppdatere avhengigheter fra malen
+    prepare # Klargjør prosjektet ved å installere `prek` og oppdatere avhengigheter fra malen
     preview # Lag et preview med Quarto
+    update  # Oppdater Python og pre-commit avhengigheter
 ```
 
 ## Hva er konfigurert i malen
