@@ -12,7 +12,7 @@ prepare:
 # Fiks feil og formater kode med ruff
 fix:
     uv run --only-dev ruff check --fix .
-    uv run --only-dev ruff format .
+    uv run ruff format .
 
 # Sjekk at alt koden ser bra ut og er klar for å legges til i git
 lint:
