@@ -27,8 +27,9 @@ render:
     uv run --group quarto quarto render .
 
 # Bygg prosjektet i Docker
-build:
-    docker build .
+[arg('image', pattern='chainguard_python.Dockerfile|Dockerfile')]
+build image='Dockerfile':
+    docker build -f {{image}} .
 
 # Oppdater Python og pre-commit avhengigheter
 update:
