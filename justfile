@@ -7,7 +7,7 @@ default:
 # Klargjør prosjektet ved å installere `prek` og oppdatere avhengigheter fra malen
 prepare:
     uv run --only-dev prek install
-    uv lock --only-dev --upgrade
+    uv lock --upgrade
 
 # Fiks feil og formater kode med ruff
 fix:
