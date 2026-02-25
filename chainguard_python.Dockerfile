@@ -2,8 +2,6 @@
 # ut om man trenger en annen versjon av Python, pass da på at versjonen man
 # bruker må være lik for "builder" og under ved neste "FROM"
 FROM cgr.dev/chainguard/python:latest-dev AS builder
-# Kopier inn uv
-COPY --from=ghcr.io/astral-sh/uv:0.9.18 /uv /uvx /bin/
 
 # Be uv kompilere kilder for raskere oppstart
 ENV UV_COMPILE_BYTECODE=1
