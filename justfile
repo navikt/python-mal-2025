@@ -22,6 +22,10 @@ lint:
 preview:
     uv run --group quarto quarto preview .
 
+# Bygg Quarto-prosjektet
+render:
+    uv run --group quarto quarto render .
+
 # Bygg prosjektet i Docker
 build:
     docker build .
