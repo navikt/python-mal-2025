@@ -5,6 +5,8 @@ on:
   pull_request:
   workflow_dispatch:
     # Tillat at man manuelt starter jobber på Github
+permissions:
+  contents: read
 env:
   FORCE_COLOR: "1"
 jobs:
