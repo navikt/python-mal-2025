@@ -33,7 +33,7 @@ build image='Dockerfile':
 
 # Sjekk etter sårbarheter i Python-avhengigheter
 audit:
-    uv run --with pip-audit pip-audit --local
+    uv run --all-groups --with pip-audit pip-audit --local
 
 # Oppdater Python og pre-commit avhengigheter
 update:
