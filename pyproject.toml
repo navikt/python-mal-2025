@@ -17,3 +17,6 @@ notebooks = [
 quarto = [
     "quarto-cli>=1.8.26",
 ]
+
+[tool.uv]
+exclude-newer = "1 week"
