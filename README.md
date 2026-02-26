@@ -62,6 +62,11 @@ fra tid til annen) for å passe på at de er relevante.
 - [`Dockerfile`](./Dockerfile) refererer til et `uv` bilde, dette burde holdes
 oppdatert.
 
+> [!NOTE]
+> Dependabot er satt opp til å oppgradere avhengigheter i `Dockerfile`, men den
+> fungerer dårlig med [`uv` sitt
+> bilde](https://github.com/dependabot/dependabot-core/issues/13383).
+
 Utover disse som krever manuel oppdatering kan det være greit å oppdatere Python
 avhengigheter. Dette må selvsagt testes før det legges til og det er mange
 nyanser i hvordan vi kan oppdatere, så vi dokumenterer bare en generell
@@ -73,6 +78,16 @@ just update
 
 Dette vil oppgradere Python avhengigheter med `uv lock --upgrade` og oppdatere
 `prek` avhengigheter med `prek auto-update`.
+
+### Dependabot
+
+Vi har også konfigurert [Dependabot](.github/dependabot.yaml) for å jevnlig
+sjekke avhengigheter. Dependabot er konfigurert til å sjekke Python
+avhengigheter, Github Action avhengigheter samt Dockerfile avhengigheter.
+
+Dependabot fungerer ved å jevnlig sjekke om det er avhengigheter som man burde
+oppgradere og deretter opprette Pull Request rett på Github for å oppgradere
+avhengighet(ene).
 
 ## Tilgjengelige kommandoer
 
