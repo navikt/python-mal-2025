@@ -21,7 +21,7 @@ jobs:
             with:
               python-version-file: ".python-version"
           - name: Run linting
-            uses: j178/prek-action@v1
+            uses: j178/prek-action@v2
   audit:
     runs-on: ubuntu-latest
     steps:
