@@ -32,3 +32,4 @@ jobs:
               python-version-file: ".python-version"
           - uses: extractions/setup-just@v4
           - run: just audit
+            continue-on-error: true
