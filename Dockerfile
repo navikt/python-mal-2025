@@ -1,5 +1,5 @@
 # Vi bruker et Docker bilde hvor uv allerede er installert
-FROM ghcr.io/astral-sh/uv:0.13.5-trixie-slim AS builder
+FROM ghcr.io/astral-sh/uv:0.13.6-trixie-slim AS builder
 
 # Be uv kompilere kilder for raskere oppstart
 ENV UV_COMPILE_BYTECODE=1
