@@ -35,7 +35,10 @@ build image='Dockerfile':
 audit:
     uv audit
 
-# Oppdater Python og pre-commit avhengigheter
+# Oppdater Python
 update:
     uv lock --upgrade
+
+# Oppdaterer pre-commit avhengigheter
+update-precommit:
     uv run prek auto-update
